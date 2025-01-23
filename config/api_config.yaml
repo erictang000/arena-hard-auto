@@ -9,6 +9,12 @@
 #     parallel: int
 #     system_prompt: str optional (add system instruction when generating model answer)
 
+gpt-4-1106-preview:
+    model_name: gpt-4-1106-preview
+    endpoints: null
+    api_type: openai
+    parallel: 8
+
 sky-T1-32B-Preview:
     model_name: sky-T1-32B-Preview
     endpoints:
@@ -26,9 +32,10 @@ qwen2.5-32b-instruct:
     parallel: 8
 
 qwq-32b-preview:
-    model_name: qwq-32b-preview
+    model_name: Qwen/QwQ-32B-Preview
     endpoints: 
-        - api_base: http://localhost:1996/v1
+        - api_base: http://0.0.0.0:8000/v1
           api_key: empty
     api_type: openai
     parallel: 8
+    system_prompt: "You are a helpful and harmless assistant. You are Qwen developed by Alibaba."
